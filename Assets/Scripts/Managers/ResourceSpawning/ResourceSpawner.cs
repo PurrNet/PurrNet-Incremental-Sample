@@ -65,7 +65,7 @@ namespace ProgressiveSample
                 InitSeed(Random.Range(-10000, 10000));
         }
 
-        [ObserversRpc(bufferLast: true)]
+        [ObserversRpc(runLocally: true, bufferLast: true)]
         private void InitSeed(int seed)
         {
             Random.InitState(seed);
